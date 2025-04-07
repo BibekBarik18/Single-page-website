@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Single Page</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        /* Header */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        
+        nav a:hover, nav a.active {
+            background: #3498db;
+        }
+        
+        /* Main content */
+        main {
+            margin-top: 60px;
+        }
+        
+        section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        section:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Hero section */
+        .hero {
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1600x900') no-repeat center center/cover;
+            color: white;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Content sections */
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+            color: #3498db;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Services grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <nav>
+            <h1>ExploreMore</h1>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Hero section -->
+        <section id="home" class="hero">
+            <div class="section-content">
+                <h2>Discover Our World</h2>
+                <p>Welcome to our expansive single-page experience. Scroll down or use the navigation to explore our content.</p>
+                <a href="#about" class="btn">Begin Journey</a>
+                
+                
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section id="about">
+            <div class="section-content">
+                <h2>About Our Company</h2>
+                <p>We've been creating amazing experiences for over a decade. Our team of experts is dedicated to delivering quality service.</p>
+                
+                <h3>Our History</h3>
+                <p>Founded in 2010, we started as a small team with big dreams. Today we serve clients worldwide with innovative solutions.</p>
+                
+                <h3>Our Mission</h3>
+                <p>To provide exceptional service while maintaining the highest standards of quality and integrity.</p>
+                
+                <!-- Extra content to make section taller -->
+                <div style="height: 50vh; display: flex; align-items: center; justify-content: center;">
+                
+                </div>
+            </div>
+        </section>
+
+        <!-- Services section -->
+        <section id="services">
+            <div class="section-content">
+                <h2>Our Services</h2>
+                <p>We offer a comprehensive range of services to meet all your needs.</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Web Design</h3>
+                        <p>Beautiful, responsive websites tailored to your brand with modern design principles.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Digital Marketing</h3>
+                        <p>Comprehensive strategies to grow your online presence and reach your target audience.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Content Creation</h3>
+                        <p>Engaging content that tells your story and connects with your customers.</p>
+                    </div>
+                </div>
+                
+                <!-- Extra content to make section taller -->
+                <div style="height: 40vh; margin-top: 3rem; display: flex; align-items: center; justify-content: center;">
+            
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact">
+            <div class="section-content">
+                <h2>Get In Touch</h2>
+                <p>We'd love to hear from you. Reach out for inquiries or to start a project.</p>
+                
+                <h3>Contact Information</h3>
+                <p>Email: contact@exploremore.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: 123 Business Ave, City, Country</p>
+                
+                <!-- Extra space to make section taller -->
+                <div style="height: 60vh; display: flex; align-items: center; justify-content: center;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 ExploreMore. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Highlight active navigation link while scrolling
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
